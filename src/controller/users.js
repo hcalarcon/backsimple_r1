@@ -72,6 +72,7 @@ export const createUsers = async (req, res) => {
   }
 };
 
+//middleware
 export const auth = (req, res, next) => {
   //obtengo el token desde la request/ front
   const token = req.headers["auth"];
@@ -83,30 +84,33 @@ export const auth = (req, res, next) => {
     claveSecreta,
     (
       error,
-      user //error va a captura si el token es invalido
+      payload //error va a captura si el token es invalido
     ) => {
       if (error) {
         //si el token es invalido
         return res.status(400).json({ message: "el token no es valido" });
       } else {
-        req.user = user;
+        //el token es valido
+        req.user = payload;
         next();
       }
     }
   );
 };
 
-export const ListarProductos = (req, res) => {
+export const ListarMateriasByDni = (req, res) => {
   const user = req.user;
+  const { dni, nombre } = user;
+  console.log(dni);
   //consultar en la base de datos los productos guardados para el user
   //estamos simulando una lista de la base de datos
-  const listaProductos = [
-    { nombre: "plato redondo 24cm", precio: "200p" },
-    { nombre: "plato redondo 25cm", precio: "201p" },
-    { nombre: "plato redondo 26cm", precio: "202p" },
+  const listaMaterias = [
+    { id: 10, nombre: "so" },
+    { id: 11, nombre: "arquitectura" },
+    { id: 12, nombre: "web" },
   ];
 
-  return res.json({ Productos: listaProductos });
+  return res.json(listaMaterias);
 };
 
 //funciones privadas

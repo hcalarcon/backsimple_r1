@@ -1,7 +1,12 @@
 //archivo para manejar las rutas de usuarios
 
 import { Router } from "express";
-import { ListarProductos, auth, createUsers, logIn } from "../controller/users";
+import {
+  ListarMateriasByDni,
+  auth,
+  createUsers,
+  logIn,
+} from "../controller/users";
 
 //objeto para manejo de url
 const routerUsers = Router();
@@ -26,6 +31,6 @@ routerUsers.post("/user/usersp", createUsers);
 //cada vez que agrego una nueva funcion debo crear una nueva ruta
 
 //nueva ruta, para lista productos
-routerUsers.get("/user/obtenerProductos", auth, ListarProductos);
+routerUsers.get("/user/obtenerProductos", auth, ListarMateriasByDni);
 
 export default routerUsers;

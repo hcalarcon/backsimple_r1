@@ -1,5 +1,6 @@
 @login = http://localhost:3000/user/login
 @singup = http://localhost:3000/user/usersp
+@materias = http://localhost:3000/user/obtenerProductos
 
 
 
