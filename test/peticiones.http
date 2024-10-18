@@ -4,6 +4,7 @@
 
 
 
+
 POST {{login}}
 Content-Type: application/json
 
@@ -22,3 +23,6 @@ Content-Type: application/json
    "password" : "1234"
 }
 
+###
+GET {{materias}}
+auth : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkbmkiOiIyMDIxIiwibm9tYnJlIjoicHJ1ZWJhIDEiLCJpYXQiOjE3MTcxNjI2OTUsImV4cCI6MTcxNzE2Mjc1NX0.5DELWX5amOdDufkUxZ0LGhD96s58bwF9VOtNrlIR7SU

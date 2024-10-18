@@ -6,4 +6,5 @@ export const config = {
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASS || "",
   database: process.env.DB_DATABASE || "backsimpler1",
+  port: process.env.DB_PORT,
 };

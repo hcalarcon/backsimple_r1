@@ -2,7 +2,7 @@
 
 import { Router } from "express";
 import {
-  ListarMateriasByDni,
+  ListarMateriasBydni,
   auth,
   createUsers,
   logIn,

@@ -104,6 +104,7 @@ export const ListarMateriasByDni = (req, res) => {
   console.log(dni);
   //consultar en la base de datos los productos guardados para el user
   //estamos simulando una lista de la base de datos
+  query= 'select * from materias m cursar c'
   const listaMaterias = [
     { id: 10, nombre: "so" },
     { id: 11, nombre: "arquitectura" },
